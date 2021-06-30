@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=Charge les logiciels en cache
+Type=Application
+Comment=Initialize softwares
+Comment[en_GB]=Initialize softwares
+Comment[fr]=Initialise les logiciels
+Terminal=true
+Exec=/home/technovz/initSoftware.sh
+Icon=htop
+Categories=ConsoleOnly;System;
+GenericName=Initialize
+GenericName[en_GB]=Initialize
+GenericName[fr]=Initialize
+Keywords=system;process;task

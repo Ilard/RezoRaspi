@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=Eteint tous les Raspi
+Type=Application
+Comment=Shutdown all Raspi
+Comment[en_GB]=Shutdown all Raspi
+Comment[fr]=Eteint tous les Raspi
+Terminal=true
+Exec=/home/technovz/shutdownAllRaspi.sh
+Icon=htop
+Categories=ConsoleOnly;System;
+GenericName=Shutdown Raspi
+GenericName[en_GB]=Shutdown Raspi
+GenericName[fr]=Eteint Raspi
+Keywords=system;process;task
