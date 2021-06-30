@@ -51,10 +51,10 @@ function ping($ip) {
 
 
 /*
- * Process shutdown of all Raspi
+ * Process initialization og all softwares
  */
 
-function initSoftwareOnAllRaspi() {
+function initSoftwareOnAllRaspiFromDHCP() {
     $allRaspiArr = getAllRaspi();
 
     foreach($allRaspiArr as $raspi) {
@@ -75,9 +75,29 @@ function initSoftwareOnAllRaspi() {
 
 
 /*
+ * Process initialization og all softwares
+ */
+ 
+function initSoftwareOnAllRaspiFromStatic() {
+    for($i=1; $i<16;$i++) {
+        $ip = "192.168.1." . (100+$i);
+        echo "- Raspi: " . $ip . "\n";
+
+        if(ping($ip) == 0 ) {       
+            libreofficeSoftware($ip);
+	    chromiumSoftware($ip);
+        } else {
+            echo "Raspi not connected\n";
+        }
+    }
+    
+}
+
+
+/*
  * Main
  */
 
-initSoftwareOnAllRaspi();
+initSoftwareOnAllRaspiFromStatic();
 
 ?>
